@@ -17,7 +17,7 @@
             $sql = "INSERT INTO admin (email, name, password, address, phone, photo) VALUES ('$email', '$name', '$password', '$address', '$phone', '$photo')";
             $query = mysqli_query($conn, $sql);
             if($query){
-                echo "<script>alert('Register Berhasil')</script>";
+                echo "<script>alert('Akun Berhasil dibuat')</script>";
                 echo "<script>window.location.href='login.php'</script>";
             }else{
                 echo "<script>alert('Register Gagal')</script>";
@@ -35,6 +35,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png" type="image/icon type">
     <title>Register</title>
 </head>
 <body>
