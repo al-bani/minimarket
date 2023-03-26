@@ -13,7 +13,7 @@
             unset($_SESSION['address']);
             unset($_SESSION['phone']);
             unset($_SESSION['photo']);
-            unset($_SESSION['id']);
+            unset($_SESSION['admin_id']);
             echo "<script>alert('Logout Berhasil')</script>";
             echo "<script>window.location.href='login.php'</script>";
             exit;
@@ -39,8 +39,8 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="manage/product.php">Manage Product</a></li>
-                    <li><a href="manage/orders.php">Manage Orders</a></li>
+                    <li><a href="products/">Manage Product</a></li>
+                    <li><a href="orders/">Manage Orders</a></li>
                    
                 </ul>
             </div>
@@ -51,8 +51,8 @@
             <h4><?= $_SESSION['address'] ?></h4>
             <h3><?= $_SESSION['email'] ?></h3>
             <h3><?= $_SESSION['phone'] ?></h3>
-            <input type="submit" onclick="location.href='update-profil.php?id=<?= $_SESSION['id']?>'" class="btn-green" value="Update">
-            <input type="submit"  onclick="location.href='index.php?logout=1'" class="btn-red" value="logout">
+            <input type="submit" onclick="location.href='update-profil.php'" class="btn-green" value="Update">
+            <input type="submit"  onclick="location.href='index.php?logout=success'" class="btn-red" value="logout">
         </div>
     </div>
 </body>

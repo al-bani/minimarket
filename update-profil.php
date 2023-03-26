@@ -1,5 +1,5 @@
 <?php include("server/conn.php");
-        $id = $_SESSION['id'];
+        $id = $_SESSION['admin_id'];
     
         if(!isset($_SESSION['status'])){
             header('location: login.php');
@@ -62,7 +62,7 @@
             <h3>Update Profil</h3>
         </div>
         <div class="box">
-            <form method="POST" action="update-profil.php?id=<?= $id ?>">
+            <form method="POST" action="update-profil.php">
                 <div class="input">
                     <input type="text" class="Textbox" name="email" placeholder="Email" value="<?= $_SESSION['email']; ?>" required>
                 </div>

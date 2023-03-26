@@ -18,7 +18,7 @@
             $_SESSION['address'] = $row['address'];
             $_SESSION['phone'] = $row['phone'];
             $_SESSION['photo'] = $row['photo'];
-            $_SESSION['id'] = $row['id'];
+            $_SESSION['admin_id'] = $row['id'];
 
             $_SESSION['status'] = TRUE;
             

@@ -15,6 +15,12 @@
         $sql = "INSERT INTO product (product_id, product_name, product_price, product_desc, 
         product_stok, product_photo) VALUES ('$product_id', '$product_name', '$product_price', '$product_desc', '$product_stok', '$product_photo')";
         $query = mysqli_query($conn, $sql);
+
+        if ($query) {
+            header('location: index.php');
+         } else {
+             echo "<script>alert('Input Order Gagal')</script>";
+         }
     }
 ?>
 
