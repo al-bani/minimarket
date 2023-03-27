@@ -18,9 +18,13 @@
                 $confirm_password = $_POST['confirm-password'];
                 $address = $_POST['address'];
                 $phone = $_POST['phone'];
-                $photo = $_POST['photo'];
+                $photo = $_POST['photo'];   
         
                 if($password == $confirm_password){
+                    if($password == NULL){
+                        $password = $old_pw;
+                    }
+
                     $sql = "UPDATE admin SET email = '$email',
                                             name = '$name',
                                             password = '$password',
@@ -55,8 +59,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo.png" type="image/icon type">
     <title>Update Profil</title>
+    
 </head>
 <body>
+<script>
+    function check(){
+        if(document.getElementById('cb_pass').checked){
+            document.getElementById('pass').disabled = false;
+            document.getElementById('confirm-pass').disabled = false;
+        } else {
+            document.getElementById('pass').disabled = true;
+            document.getElementById('confirm-pass').disabled = true;
+        }
+    }
+</script>
     <div class="container">
         <div class="top">
             <h3>Update Profil</h3>
@@ -72,11 +88,12 @@
                 <div class="input">
                     <input type="password" class="Textbox" name="old_password" placeholder="Old Password" required>
                 </div>
+                    <input type="checkbox" id="cb_pass" onclick="check();"><label for="cb_pass">Ubah Password</label>
                 <div class="input">
-                    <input type="password" class="Textbox" name="password" placeholder="New Password" required>
+                    <input type="password" class="Textbox" name="password" id="pass" placeholder="New Password" disabled required>
                 </div>
                 <div class="input">
-                    <input type="password" class="Textbox" name="confirm-password" placeholder="Confirm New Password" required>
+                    <input type="password" class="Textbox" name="confirm-password" id="confirm-pass" placeholder="Confirm New Password" disabled required>
                 </div>
                 <div class="input">
                     <input type="text" class="Textbox" name="address" placeholder="Address" value="<?= $_SESSION['address']; ?>" required>

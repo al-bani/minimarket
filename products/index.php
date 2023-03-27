@@ -30,6 +30,7 @@ $result = mysqli_query($conn, $query);
                 <input type="text" class="textbox" name="txt-search" placeholder="Search by Name" required>
                 <input type="submit" class="submit" name="btn-search" value="Search">
             </form>
+            <input type="submit" onclick="location.href='../products/';" value="refresh">
         </div>
         <div class="box">
             <input type="submit" value="Tambah Product" onclick="location.href='create.php'">
