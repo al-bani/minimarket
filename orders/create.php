@@ -46,6 +46,8 @@
         <div class="top">
             <h3>Input Order</h3>
         </div>
+        <div>
+        </div>
         <div class="box">
             <form method="POST" action="create.php">
                 <div class="input">
@@ -54,10 +56,12 @@
                             <option value="<?= $row['product_id'] ?>"><?= $row['product_id'] ?></option>
                         <?php endwhile; ?>
                     </select>
+                    
+                    <div class="input">
+                        <input type="text" class="Textbox" name="order_qty" placeholder="Quantity" required>
+                    </div>
                 </div>
-                <div class="input">
-                    <input type="text" class="Textbox" name="order_qty" placeholder="Quantity" required>
-                </div>
+
                 <div class="Submit">
                     <input type="submit" class="button-green" name="btn_orders" value="Create Order">
                 </div>

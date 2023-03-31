@@ -29,11 +29,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo.png" type="image/icon type">
+    <script>
+        function changeFunc() {
+            var selectBox = document.getElementById("selectbox");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+
+            if (selectedValue == 1) {
+                location.href='update-profil.php';
+            } else if (selectedValue == 2) {
+                location.href='index.php?logout=success';
+            }
+        }
+    </script>
     <title>Home</title>
 </head>
 <body>
     <div class="container">
         <div class="top">
+            <select id="selectbox" onchange="changeFunc();">
+                <option hidden Selected><img src="<?= $_SESSION['photo'] ?>" width="20" alt=""><?= $_SESSION['name'] ?></option>
+                <option value="1">My Account</option>
+                <option value="2">Logout</option>
+            </select>
             <div class="logo">
                 <img src="img/logo.png" alt="logo">
             </div>

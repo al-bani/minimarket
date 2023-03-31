@@ -57,9 +57,12 @@ $result = mysqli_query($conn, $query);
                             <td><?= $row['product_stok'] ?></td>
                             <td>
                                 <input type="submit" class="btn-update" value="Edit" onclick="location.href='update.php?product_id=<?= $row['product_id'] ?>';">
-                                <span class="submitbtn" onclick="return confirm ('Data ini akan di hapus?')">
-                                    <input type="submit" class="btn-delete" value="delete" onclick="location.href='delete.php?product_id=<?= $row['product_id'] ?>';">
-                                </span>
+                                    <input type="submit" class="btn-delete" value="delete"
+                                    onclick="if (confirm ('Data ini akan di hapus?') == true) {
+                                                location.href='delete.php?product_id=<?= $row['product_id'] ?>'
+                                            } else{
+                                                 return false;
+                                    }">         
                             </td>
                         </tr>
                     <?php endwhile; ?>

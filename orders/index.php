@@ -58,9 +58,12 @@ $result = mysqli_query($conn, $query);
                             <td>
                                 <div class="alert">
                                     <input type="submit" class="btn-update" value="Edit" onclick="location.href='update.php?order_id=<?= $row['order_id'] ?>';">
-                                    <span class="closebtn" onclick="return confirm ('Data ini akan di hapus?')">
-                                        <input type="submit" class="btn-delete" value="delete" onclick="location.href='delete.php?order_id=<?= $row['order_id'] ?>';">
-                                    </span>
+                                    <input type="submit" class="btn-delete" value="delete"
+                                    onclick="if (confirm ('Data ini akan di hapus?') == true) {
+                                                location.href='delete.php?order_id=<?= $row['order_id'] ?>'
+                                            } else{
+                                                 return false;
+                                    }">       
                                 </div>
                             </td>
                         </tr>
