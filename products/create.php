@@ -4,7 +4,7 @@
          header('location: ../index.php');
     }
     
-    if(isset($_POST['login_btn'])){
+    if(isset($_POST['btn_submit'])){
         $product_id = $_POST['product_id'];
         $product_name = $_POST['product_name'];
         $product_price = $_POST['product_price'];
@@ -12,8 +12,8 @@
         $product_stok = $_POST['product_stok'];
         $product_photo = $_POST['product_photo'];
 
-        $sql = "INSERT INTO product (product_id, product_name, product_price, product_desc, 
-        product_stok, product_photo) VALUES ('$product_id', '$product_name', '$product_price', '$product_desc', '$product_stok', '$product_photo')";
+        $sql = "INSERT INTO products (product_name, product_price, product_desc, 
+        product_stok, product_photo) VALUES ('$product_name', '$product_price', '$product_desc', '$product_stok', '$product_photo')";
         $query = mysqli_query($conn, $sql);
 
         if ($query) {
@@ -39,10 +39,7 @@
             <h3>Input Product</h3>
         </div>
         <div class="box">
-            <form method="POST" action="product.php">
-                <div class="input">
-                    <input type="text" class="Textbox" name="product_id" placeholder="Product Id" required>
-                </div>
+            <form method="POST" action="create.php">
                 <div class="input">
                     <input type="text" class="Textbox" name="product_name" placeholder="Product Name" required>
                 </div>
