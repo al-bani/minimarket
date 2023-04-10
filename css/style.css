@@ -1,0 +1,646 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+li,
+a,
+button {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #f00;
+}
+
+button {
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    background: #fff;
+}
+
+.btn__dash a button ion-icon {
+    width: 64px;
+    height: 64px;
+}
+
+.btn__dash a button {
+    padding: 5px 15px;
+}
+
+button:hover {
+    background-color: #f00;
+    color: #fff;
+}
+
+img {
+    width: 64px;
+    height: 64px;
+}
+
+/* Select Option Dropdown*/
+.select-header {
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    font-size: 16px;
+    flex: 1;
+    padding: 9px 12px;
+    color: #000;
+    background-color: var(--white);
+    background-image: none;
+    cursor: pointer;
+}
+
+.select-header::-ms-expand {
+    display: none;
+}
+
+.select {
+    position: relative;
+    display: inline-flex;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.45em;
+    background-color: --white;
+    transition: all 0.3s ease 0s;
+    pointer-events: none;
+}
+
+.select:hover::after {
+    color: #fff;
+
+}
+
+.select-header:hover {
+    background-color: #f00;
+    color: #fff;
+}
+
+.option-header {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Container Form */
+.container {
+    position: flex;
+    margin-top: 20%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    position: flex;
+    margin-top: 20%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .form {
+    background: #fff;
+    padding: 30px 35px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: auto;
+}
+
+.container .form form .form-control {
+    height: 40px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.form form .button {
+    background: #035AA6;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.form form .custom-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.check {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.container .form form .button {
+    background: #035AA6;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.container .form form .button:hover {
+    background: #0367a6;
+}
+
+.container .form form .link {
+    padding: 5px 0;
+}
+
+.container .form form .link a {
+    color: #0367a6;
+}
+
+.container .login-form form p {
+    font-size: 14px;
+}
+
+.container .row .alert .button {
+    font-size: 14px;
+}
+
+/* dashboard content */
+
+
+.split a {
+    transition: all 0.3s ease 0s;
+}
+
+.split a:hover {
+    color: #f00;
+}
+
+.split {
+    display: inline-block;
+    padding: 0px 10px;
+    /* ubah nilai padding-top menjadi 50px */
+    height: 80%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    list-style: circle;
+}
+
+/* Control the left side */
+.left {
+    left: 0;
+}
+
+/* Control the right side */
+.right {
+    right: 0;
+}
+
+.centered__right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: justify;
+    float: left;
+    transform: translate(-50%, -50%);
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.centered img {
+    width: 400px;
+    height: 400px;
+}
+
+.salman {
+    padding: 10px 5%;
+}
+
+table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid #38678f;
+    margin: 50px auto;
+    background: white;
+
+}
+
+th {
+    background: steelblue;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    font-weight: lighter;
+    text-shadow: 0 1px 0 #38678f;
+    color: white;
+    border: 1px solid #38678f;
+    box-shadow: inset 0px 1px 2px #568ebd;
+    transition: all 0.2s;
+}
+
+tr {
+    border-bottom: 1px solid #cccccc;
+}
+
+tr:last-child {
+    border-bottom: 0px;
+}
+
+td {
+    border-right: 1px solid #cccccc;
+    padding: 10px;
+    transition: all 0.2s;
+}
+
+td:last-child {
+    border-right: 0px;
+}
+
+td.selected {
+    background: #d7e4ef;
+}
+
+td input {
+    font-size: 14px;
+    background: none;
+    outline: none;
+    border: 0;
+    display: table-cell;
+}
+
+td input:focus {
+    box-shadow: 0 1px 0 steelblue;
+    color: steelblue;
+}
+
+td input:hover {
+    color: #035AA6;
+}
+
+::-moz-selection {
+    background: steelblue;
+    color: white;
+}
+
+::selection {
+    background: steelblue;
+    color: white;
+}
+
+.heavyTable {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: float 5s infinite;
+    margin-top: 1px;
+}
+
+.babi {
+    display: flex;
+    height: 50px;
+    padding: 0;
+    background: #0367a6;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+}
+
+.babi:hover {
+    background: #035AA6;
+}
+
+.babi:active {
+    background: #035AA6;
+}
+
+.babi__text,
+.babi__icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: #fff;
+    height: 100%;
+}
+
+.babi__icon {
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.ss .input {
+    margin-right: auto;
+    border: 0;
+    outline: none;
+    color: #000;
+}
+
+.search_wrap {
+    width: 350px;
+    margin: 38px auto;
+    float: left;
+}
+
+.search_wrap .search_box {
+    position: relative;
+    width: 350px;
+    height: 50px;
+}
+
+.search_wrap .search_box .input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
+.search_wrap .search_box .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background: #0367a6;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.search_wrap .search_box .btn:hover {
+    background: #035AA6;
+}
+
+.search_wrap .search_box .btn.btn_common .fas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+}
+
+.search_wrap.search_wrap_1 .search_box .btn {
+    right: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.search_wrap.search_wrap_1 .search_box .input {
+    padding-right: 80px;
+}
+
+td a.edit ion-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    align-items: center;
+}
+
+td a.edit ion-icon:hover {
+    background: #157347;
+    color: #fff;
+}
+
+td a.delete ion-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    align-items: center;
+}
+
+td a.delete ion-icon:hover {
+    background: #bb2d3b;
+    color: #fff;
+}
+
+ion-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.conn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.cari {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.cari .ss {
+    margin-right: 5px;
+
+}
+
+.cari .babi {
+    margin-left: 5px;
+}
+
+.action_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.insert_action {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    float: right;
+    margin-left: 500px;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.back__button {
+    display: flex;
+    align-items: center;
+}
+
+.back__button ion-icon {
+    text-align: center;
+}
+
+.back__button h1 {
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.back__button a ion-icon:hover {
+    color: #f00;
+}
+
+.back__button a ion-icon {
+    width: 32px;
+    height: 32px;
+    margin-top: 20px;
+    margin-left: 75px;
+}
+
+
+.split-screen {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.left-side {
+    flex: 1;
+    padding-top: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side img {
+    width: 300px;
+    height: 300px;
+}
+
+.right-side {
+    flex: 1;
+    padding-top: 130px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.top {
+    height: 50vh;
+}
+
+.top h1 {
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.top p {
+    justify-content: center;
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+}
+
+.bottom {
+    height: 50vh;
+}
+
+.bottom h1 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.col-4 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+.update__profile {
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.update__profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.center1 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
