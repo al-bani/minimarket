@@ -74,6 +74,7 @@ if (isset($_GET['logout'])) {
     </header>
 
     <!-- content -->
+    <h1 style="text-align: center; margin-top: 20px;">Dashboard</h1>
     <!-- Left Content -->
     <div class="split left">
         <div class="centered">

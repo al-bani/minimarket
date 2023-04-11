@@ -138,8 +138,8 @@ if (isset($_GET['logout'])) {
 
     <!-- Update Form -->
     <div class="col-md-4 offset-md-4 form register-form">
-        <form maction="update.php?order_id=<?= $order_id ?>" method="post">
-            <h2 class="text-center">Update Product</h2>
+        <form action="update.php?order_id=<?= $order_id ?>" method="post">
+            <h2 class="text-center">Update Order</h2>
             <div class="form-group">
                 <p>ID Product</p>
                 <select name="prod_id" class="form-control" style="cursor:pointer">

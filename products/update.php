@@ -134,37 +134,31 @@ if (isset($_GET['logout'])) {
 
 
     <!-- Form Update -->
-    <form action="update.php?product_id=<?= $product_id ?>" method="post">
-        <div class="row">
-            <div class="col-md-4 offset-md-4 form register-form">
-                <form action="" method="post">
-                    <h2 class="text-center">Update Order</h2>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="product_name" placeholder="Name" value="<?= $product_name_old ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="product_price" placeholder="price" value="<?= $product_price_old ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="product_desc" placeholder="desc" value="<?= $product_desc_old ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="product_stok" placeholder="stok" value="<?= $product_stok_old ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="product_photo" placeholder="photo" value="<?= $product_photo_old ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="submit" class="form-control button" name="btn_update" value="Update">
-                    </div>
-                </form>
-            </div>
+    <div class="row">
+        <div class="col-md-4 offset-md-4 form register-form">
+            <form action="update.php?product_id=<?= $product_id ?>" method="post">
+                <h2 class="text-center">Update Product</h2>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="product_name" placeholder="Name" value="<?= $product_name_old ?>">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="product_price" placeholder="price" value="<?= $product_price_old ?>">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="product_desc" placeholder="desc" value="<?= $product_desc_old ?>">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="product_stok" placeholder="stok" value="<?= $product_stok_old ?>">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="product_photo" placeholder="photo" value="<?= $product_photo_old ?>">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="form-control button" name="btn_update" value="Update">
+                </div>
+            </form>
         </div>
+    </div>
 </body>
 
 </html>
