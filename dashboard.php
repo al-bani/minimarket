@@ -37,6 +37,7 @@ if (isset($_GET['logout'])) {
     <script src="https://example.com/fontawesome/v6.4.0/js/fontawesome.js" data-auto-replace-svg="nest"></script>
     <script src="https://example.com/fontawesome/v6.4.0/js/solid.js"></script>
     <script src="https://example.com/fontawesome/v6.4.0/js/brands.js"></script>
+    <link rel="icon" href="img/logo/logo.png" type="image/icon type">
     <script>
         function changeFunc() {
             var selectBox = document.getElementById("selectbox");
@@ -59,7 +60,7 @@ if (isset($_GET['logout'])) {
         <nav>
             <div class="nav__links">
                 <ul>
-                    <li><a href="#"><button>About</button></a></li>
+                    <li><a href="about.html"><button>About</button></a></li>
                     <div class="select">
                         <select class="select-header" id="selectbox" onchange="changeFunc();">
                             <option hidden Selected><?= $_SESSION['name'] ?></option>

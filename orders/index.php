@@ -1,5 +1,10 @@
 <?php include("../server/conn.php");
 
+if (!isset($_SESSION['status'])) {
+    header('location: ../login.php');
+    exit;
+}
+
 if (isset($_POST['btn-search'])) {
     $search = $_POST['txt-search'];
     $query = "SELECT * FROM orders WHERE order_id LIKE '%$search%'";
@@ -33,6 +38,7 @@ if (isset($_GET['logout'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="icon" href="../img/logo/logo.png" type="image/icon type">
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script>
@@ -47,7 +53,6 @@ if (isset($_GET['logout'])) {
             }
         }
     </script>
-    <link rel="icon" href="img/logo/logo.png" type="image/icon type">
     <title>Manage Orders</title>
 </head>
 <!-- NAVBAR -->
@@ -56,7 +61,7 @@ if (isset($_GET['logout'])) {
     <nav>
         <div class="nav__links">
             <ul>
-                <li><a href="#"><button>About</button></a></li>
+                <li><a href="../about.html"><button>About</button></a></li>
                 <div class="select">
                     <select class="select-header" id="selectbox" onchange="changeFunc();">
                         <option hidden Selected><?= $_SESSION['name'] ?></option>

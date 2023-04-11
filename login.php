@@ -51,7 +51,7 @@ if (isset($_POST['login_btn'])) {
         <nav>
             <div class="nav__links">
                 <ul>
-                    <li><a href="#"><button>About</button></a></li>
+                    <li><a href="about.html"><button>About</button></a></li>
                     <li><a href="login.php"><button>Masuk</button></a></li>
                     <li><a href="register.php"><button>Daftar</button></a></li>
                 </ul>

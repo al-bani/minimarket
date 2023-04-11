@@ -1,7 +1,7 @@
 <?php include("../server/conn.php");
 
 if (!isset($_SESSION['status'])) {
-    header('location: ../index.php');
+    header('location: ../login.php');
 }
 
 $query = "SELECT product_id FROM products";
@@ -69,7 +69,6 @@ if (isset($_GET['logout'])) {
             }
         }
     </script>
-    <link rel="icon" href="img/logo/logo.png" type="image/icon type">
     <title>Create Order</title>
 </head>
 
@@ -80,7 +79,7 @@ if (isset($_GET['logout'])) {
         <nav>
             <div class="nav__links">
                 <ul>
-                    <li><a href="#"><button>About</button></a></li>
+                    <li><a href="../about.html"><button>About</button></a></li>
                     <div class="select">
                         <select class="select-header" id="selectbox" onchange="changeFunc();">
                             <option hidden Selected><?= $_SESSION['name'] ?></option>

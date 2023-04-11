@@ -4,6 +4,7 @@ if (isset($_SESSION['status'])) {
     header('location: dashboard.php');
 }
 
+
 if (isset($_POST['btn_register'])) {
     $email = $_POST['email'];
     $name = $_POST['name'];
@@ -18,7 +19,7 @@ if (isset($_POST['btn_register'])) {
         $query = mysqli_query($conn, $sql);
         if ($query) {
             echo "<script>alert('Akun Berhasil dibuat')</script>";
-            echo "<script>window.location.href='login.php'</script>";
+            echo "<script>window.location.href='login.php'</script>"; 
         } else {
             echo "<script>alert('Register Gagal')</script>";
             echo "<script>window.location.href='register.php'</script>";
@@ -49,7 +50,7 @@ if (isset($_POST['btn_register'])) {
         <nav>
             <div class="nav__links">
                 <ul>
-                    <li><a href="#"><button>About</button></a></li>
+                    <li><a href="about.html"><button>About</button></a></li>
                     <li><a href="login.php"><button>Masuk</button></a></li>
                     <li><a href="register.php"><button>Daftar</button></a></li>
                 </ul>

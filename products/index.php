@@ -1,5 +1,10 @@
 <?php include("../server/conn.php");
 
+if (!isset($_SESSION['status'])) {
+    header('location: ../login.php');
+    exit;
+}
+
 if (isset($_POST['btn-search'])) {
     $search = $_POST['txt-search'];
     $query = "SELECT * FROM products WHERE product_name LIKE '%$search%'";
@@ -52,7 +57,7 @@ if (isset($_GET['logout'])) {
             }
         }
     </script>
-    <link rel="icon" href="img/logo/logo.png" type="image/icon type">
+    <link rel="icon" href="../img/logo/logo.png" type="image/icon type">
     <title>Manage Products</title>
 </head>
 
@@ -63,7 +68,7 @@ if (isset($_GET['logout'])) {
         <nav>
             <div class="nav__links">
                 <ul>
-                    <li><a href="#"><button>About</button></a></li>
+                    <li><a href="../about.html"><button>About</button></a></li>
                     <div class="select">
                         <select class="select-header" id="selectbox" onchange="changeFunc();">
                             <option hidden Selected><?= $_SESSION['name'] ?></option>

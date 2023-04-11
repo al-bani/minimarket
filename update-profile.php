@@ -36,6 +36,17 @@ if (isset($_POST['btn_update'])) {
             $query = mysqli_query($conn, $sql);
             if ($query) {
                 echo "<script>alert('Profil Berhasil di Update')</script>";
+                $queryUpdate = "SELECT * FROM admin WHERE id = $id";
+                $result = mysqli_query($conn, $queryUpdate);
+                $row = mysqli_fetch_array($result);
+
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['name'] = $row['name'];
+                $_SESSION['address'] = $row['address'];
+                $_SESSION['phone'] = $row['phone'];
+                $_SESSION['photo'] = $row['photo'];
+                $_SESSION['admin_id'] = $row['id'];
+
                 echo "<script>location.href='dashboard.php';</script>";
             } else {
                 echo "<script>alert('Update Gagal')</script>";
@@ -111,7 +122,7 @@ if (isset($_GET['logout'])) {
         <nav>
             <div class="nav__links">
                 <ul>
-                    <li><a href="#"><button>About</button></a></li>
+                    <li><a href="about.html"><button>About</button></a></li>
                     <div class="select">
                         <select class="select-header" id="selectbox" onchange="changeFunc();">
                             <option hidden Selected><?= $_SESSION['name'] ?></option>

@@ -1,3 +1,15 @@
+<?php
+if (isset($_POST['start'])) {
+    if (!isset($_SESSION['status'])) {
+        header('location: login.php');
+        exit;
+    } else {
+        header('location: dashboard.php');
+        exit;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,9 +30,8 @@
         <nav>
             <div class="nav__links">
                 <ul>
-                    <li><a href="#"><button>About</button></a></li>
-                    <li><a href="login.php"><button>Masuk</button></a></li>
-                    <li><a href="register.php"><button>Daftar</button></a></li>
+                    <li><a href="about.html"><button>About</button></a></li>
+
                 </ul>
             </div>
         </nav>
@@ -33,13 +44,15 @@
             <img src="img/logo/logo.png" alt="logo">
         </div>
         <div class="right-side">
-            <h1>Right Side</h1>
+            <h1>Alfatihah</h1>
             <p>minimarket adalah suatu toko kecil yang umumnya mudah dijangkau oleh khalayak atau masyarakat lokal. Toko
                 semacam ini umumnya berlokasi di jalan yang ramai, stasiun pengisian bahan bakar, atau stasiun kereta
                 api. oleh karena itu kami ingin membuat web mini market yang dapat memudahkan user dan admin dalam
                 mengelola dan mengakses barang belanjaan dimana saja dan kapan saja.</p>
             <a href="">
-                <button type="button" class="btn btn-primary">Login disini</button>
+                <form method="POST" action="index.php">
+                    <button name="start" class="btn btn-primary">Mulai Gunakan !</button>
+                </form>
             </a>
         </div>
     </div>
